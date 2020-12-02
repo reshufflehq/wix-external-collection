@@ -1,0 +1,52 @@
+{
+  "name": "wix-external-collection",
+  "version": "0.0.1",
+  "description": "Reshuffle WIX external collection example",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "build:watch": "rimraf dist && tsc -w",
+    "lint": "eslint . --ext .ts,.js --fix",
+    "prepublishOnly": "rimraf dist && tsc",
+    "prepare": "rimraf dist && tsc",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/reshufflehq/wix-external-connection.git"
+  },
+  "keywords": [
+    "Reshuffle",
+    "integrations",
+    "workflows",
+    "wix",
+    "database"
+  ],
+  "author": "Reshuffle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/reshufflehq/wix-external-connection/issues"
+  },
+  "homepage": "https://github.com/reshufflehq/wix-external-connection#readme",
+  "dependencies": {
+    "pg": "^8.4.2",
+    "reshuffle": "latest",
+    "reshuffle-pgsql-connector": "latest",
+    "reshuffle-wix-connector": "^0.1.0",
+    "sqlutils": "^1.2.0"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.8.0",
+    "@typescript-eslint/parser": "^4.8.0",
+    "eslint": "^7.13.0",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "prettier": "^2.1.2",
+    "rimraf": "^3.0.2",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.5",
+    "dotenv": "^8.2.0",
+    "request": "^2.88.2"
+  }
+}
