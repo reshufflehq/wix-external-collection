@@ -2,8 +2,8 @@
 const HIKE_SCHEMA = {
   "schemas": [
   {
-    "displayName": "track",
-    "id": "track",
+    "displayName": "hike",
+    "id": "hike",
     "allowedOperations":     [
       "get",
       "find",
