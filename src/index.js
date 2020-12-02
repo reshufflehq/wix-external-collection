@@ -84,8 +84,8 @@ wix.on({ action: 'data/find' },
       const _skip = skip ? `OFFSET ${skip}` : ''
       const _sort = sort ? `ORDER BY ${sort[0].fieldName} ${sort[0].direction}` : ''
       const hikes = await pg.query(`SELECT * from ${COLLECTION} ${_filter} ${_sort} ${_limit} ${_skip}`)
-      const wixData = hikes.rows.map(hike => wrapDates(convertItem(hike)))
-      event.response.status(200).json({ items: wixData, totalCount: hikes.rowCount })
+      const items = hikes.rows.map(hike => wrapDates(convertItem(hike)))
+      event.response.status(200).json({ items, totalCount: hikes.rowCount })
     } else {
       event.response.status(400).json({ 'message': 'Bad request. We only have hikes' })
     }
